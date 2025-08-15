@@ -1,0 +1,33 @@
+h3{
+direction: ltr;
+    color: aliceblue;
+}
+
+h3{
+
+    color: blue;
+    background: plum;
+    padding: 46px;
+    margin-top: 80px;
+    font-size: 40px;
+    direction: rtl;
+    list-style-type:disc;
+}
+
+
+p{
+
+    color: #28b679;
+
+}
+p span{
+
+    color: aqua;
+}
+
+body{
+    background: firebrick;
+    padding-top : 60px;
+    padding-left: 57px;
+
+}
