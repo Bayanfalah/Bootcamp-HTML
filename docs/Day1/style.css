@@ -1,33 +1,580 @@
-h3{
-direction: ltr;
-    color: aliceblue;
+/* ====== أساسيات ====== */
+body {
+  font-family: Arial, sans-serif;/*نوع الخط */
+  margin: 0;/*المسافة الخارجية للعناصر*/ 
+  padding: 0;/*المسافة الداخلية للعناصر */
+  direction: rtl;
+  background: #82c7fb;  /* أزرق فاتح جدا */
+  color: #333;/* لون الخط */ 
+  line-height: 1.8; /* المسافة بين النصوص */ 
+  font-size: 20px;/* حجم الخط */ 
 }
 
-h3{
+main {
+  max-width: 1100px;
+  margin: 20px auto; /* استخدمت auto لتوسط ال main وجعلها بالمنتصف */
+  padding: 0 15px;
 
-    color: blue;
-    background: plum;
-    padding: 46px;
-    margin-top: 80px;
-    font-size: 40px;
-    direction: rtl;
-    list-style-type:disc;
+}
+
+/* الهيدر */
+header {
+  background: linear-gradient(darkblue, blue); /* تدرج بلون الهيدر*/ 
+  color: #fff;
+  padding: 60px 16px;   /* بدون height ثابت */
+  text-align: center; /* جعل النص بالمنتصف*/ 
+}
+ 
+
+/*التحكم بالخط يالي بالهيدر */ 
+header h1 {
+  margin: 0 0 10px;
+  font-size: 50px;
+  
+}
+
+/*  القائمة  */
+nav ul {
+  list-style: none; /*يشيل النقاط و الترقيم */ 
+  margin: 30px 0 0;     /* بدل margin-top:120px المبالغ فيها */
+  padding: 1px;
+  display: flex;
+  gap: 24px;/* التباعد بين عناصر القائمة */ 
+  justify-content: center; /*توسيط العناصر */ 
+
+}
+
+nav ul li a {
+  display: inline-block; /*يخلي الرابط يتصرف مثل زر.*/ 
+  text-decoration: none;/*يشيل الخط اللي تحت الرابط*/
+  color: #fcfcf8;
+  background: #1976d2;
+  padding: 12px 20px;
+  border-radius: 6px;/* الزوايا مدورة شوي */
+  transition: 0.2s;
+  font-size: 18px;/*حجم الخط */ 
+  min-width: 170px;
+  text-align: center;
+}
+/* يعطي تأثيرات للزر */ 
+nav ul li a:hover {
+  background: #0d47a1;
+    transform: translateY(-3px);  /* يطلع لفوق شوي */
+}
+
+
+/* الأقسام */
+section {
+  background: #fff; /*  خلفية بيضاء  للاقسام */ 
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px; /* تدوي الزوايا */ 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
 }
 
 
 p{
-
-    color: #28b679;
-
-}
-p span{
-
-    color: aqua;
+  margin: 0 0 12px;
+  text-align: center; /* يخلي النص بالنص */ 
 }
 
-body{
-    background: firebrick;
-    padding-top : 60px;
-    padding-left: 57px;
 
+
+/* العناوين الكبيرة يالي بالاقسام */ 
+section h2 {
+  color: #0d47a1;
+  margin-bottom: 10px;
+  font-size: 300%;
+  text-align: center;
+
+}
+
+/* المقالات */
+article {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 4px solid #8fa4ba;
+  background: #f9f9f9;
+  border-radius: 4px;
+  text-align: center  ;
+
+    color: #0d47a1;       
+}
+
+
+
+/*التاثسؤ يالي يصير لما نقرب منهم */
+article:hover{
+
+  background: #d1dbeb;
+  transform: translateY(-3px);  /* يطلع لفوق شوي */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* ظل أقوى */
+
+}
+
+
+/* الخط الكبير */
+article h3 {
+  margin: 0 0 5px;
+}
+
+
+/*الصور و الفيديو */
+img, video {
+  display: block;
+  width: 100%;             /* ياخدوا عرض القسم */
+  max-width: 600px;        /* أقصى عرض */
+  height: 300px;           /* نفس الارتفاع للجميع */
+  object-fit: cover;       /* يملأ المساحة ويقص الزائد */
+  border-radius: 6px;
+  margin: 10px auto;
+  border: 1px solid #90caf9;
+}
+
+/* النموذج */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /*التباعد*/ 
+}
+
+
+
+
+
+input, textarea {
+  width: 100%;                /* ياخد العرض كامل */
+
+  padding: 12px 15px;      
+  border: 1px solid #ccc;     /* حدود خفيفة */
+  border-radius: 8px;         /* حواف ناعمة */
+  font-size: 16px;          
+  background: #f9f9f9;       
+  transition: all 0.3s ease;  /* حركة انسيابية */
+  box-sizing: border-box;     
+}
+
+
+/* تغييرات label*/
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 25px;
+  font-weight: bold;
+  color:#0d47a1;
+  text-align: right;
+}
+
+
+
+
+
+/*  الأزرار  */
+button {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;  /* عند المرور بالماوس يتحول المؤشر ليد */
+  transition: 0.2s;
+  display: inline-block; /* يخلي الزر مثل بلوك صغير يقبل width/height */ 
+  margin: 10px auto;
+  width:60%;
+  height: 80%;
+  font-size: 150%;
+
+}
+
+
+button:hover {
+  background: #0d47a1;
+}
+
+
+
+
+
+/* الفوتر */
+footer {
+  text-align: center;
+  padding: 16px;
+  background: linear-gradient(darkblue, blue);
+  color: white;
+  margin-top: 10px;
+  
+}
+
+
+
+
+/*واجهة الداش بورد /*
+/* القائمة داخل section */
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+/* عناصر القائمة */
+section ul li {
+  background: #f9f9f9;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d47a1;
+  border: 1px solid #e0e0e0;
+  min-width: 150px;
+  transition: 0.3s;
+}
+
+section ul li:hover {
+  background: #e3f2fd;
+  transform: translateY(-5px);
+}
+
+
+header nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fcfcf8;
+  background: #1976d2;
+  padding: 12px 20px;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-size: 18px;
+  min-width: 170px;
+  text-align: center;
+}
+
+header nav a:hover {
+  background: #0d47a1;
+  transform: translateY(-3px);
+}
+
+
+/* قسم الروابط السريعة */
+
+section ul {
+  list-style: none;  /* يشيل النقاط والارقام */         
+  padding: 0;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;    
+  gap: 10px;  
+                 
+}
+
+
+ section h2{
+  margin-top: 1%;
+ }
+
+section ul li a {
+  display:block;
+  text-decoration: none;
+  color: #fcfcf8;
+  background: #1976d2;
+  padding: 12px 20px;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-size: 18px;
+  min-width: 170px;
+  text-align: center;
+}
+
+section ul li a:hover {
+  color: #1976d2;             /* يفتح اللون */
+  border-bottom: 2px solid #1976d2;  /* خط تحت النص عند المرور */
+}
+
+
+
+
+
+
+
+/* حولته الى كلاسات عشان اتحكم فيي لوحة التحكم ب*/
+.stats {
+  background: #fff; 
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;            /* يخلي كل النصوص بالنص */
+}
+
+.stats h2 {
+  color: #0d47a1;
+ 
+  font-size: 300%;
+  text-align: center;
+  margin-top: 1%;
+
+}
+
+.stats ul {
+  list-style: none;              /* يشيل النقاط */
+  padding: 0;
+  margin: 0;
+  display: flex;                 /* يخليهم جنب بعض */
+  justify-content: center;       
+  gap: 40px;                     /* مسافة بينهم */
+  flex-wrap: wrap;               /* يلفوا تحت بعض إذا الشاشة صغيرة */
+}
+
+.stats ul li {
+  background: #f9f9f9;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d47a1;
+  border: 1px solid #e0e0e0;
+  min-width: 160px;
+  transition: 0.3s;
+}
+
+.stats ul li:hover {
+  background: #e3f2fd;
+  transform: translateY(-5px);
+}
+
+
+
+/* واجهة الكورسات */
+
+
+
+/*الجدول*/
+section h2{
+
+
+  margin-top: 1%;
+}
+
+
+
+section table {
+  width: 100%;
+  border-collapse: collapse; /* يشيل الفراغات بين الخلايا */
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+  
+}
+
+section th, 
+section td {
+  border: 1px solid #ccc;  /* حدود خفيفة */
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+   
+}
+
+section thead {
+  background: #1976d2;     /* خلفية رأس الجدول */
+  color: #fff;             /* النص أبيض */
+}
+
+
+
+section table a {
+  color: #1976d2;
+  text-decoration: none;   /* يشيل الخط */
+  font-weight: 600;
+  font-size: 18px;
+}
+
+section table a:hover {
+  text-decoration: underline; /* يضيف خط عند المرور */
+}
+
+
+
+/*قائمة الدورات */ 
+.courses-list {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;   /* يخلي كل الكلام بالنص */
+  width: 97%;
+
+}
+
+
+
+
+/*واجهة الاعدادات */ 
+
+
+.prefs label {
+  font-weight: 600;      /*عرض الخط ي */
+  display: inline-block; /* يخلي النص ياخذ قد محتواه بدل ما يملي العرض كله */
+  margin-bottom: 6px;    /* مسافة صغيرة تحت */
+  color: #0d47a1;       
+  font-size: 25px;      
+  cursor: pointer;       /* يحس المستخدم إنه قابل للنقر */
+  
+}
+
+
+
+.prefs select {
+  padding: 8px 10px;        /* مساحة داخلية مريحة */
+  border: 1px solid #ffffff;   /* حدود خفيفة */
+  border-radius: 6px;       
+  font-size: 15px;          /* خط أوضح */
+  background: #f9f9f9;     
+  cursor: pointer;          /* يظهر أنه قابل للنقر */
+  transition: 0.2s;         
+  width: 100%;
+  height: 50px;
+}
+
+
+.prefs button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+/*  الخيارات*/
+.options {
+  display: flex;         /* تخلي العناصر جنب بعض */
+  gap: 80px;             /* المسافة بينهم */
+  margin: 6px 0 12px;    /* مسافة فوق وتحت */
+  font-size: 30px;
+  width: 100%;
+}
+
+/* النص مع العنصر */
+.options label {
+  display: flex;
+  align-items: center;
+  
+ 
+}
+
+/* التحكم بحجم المربع/الدائرة */
+.options input[type="checkbox"],
+.options input[type="radio"] {
+  width: 18px;           /* حجم العرض */
+  height: 18px;          /* حجم الارتفاع */
+  gap:1px
+
+}
+
+
+
+
+
+
+
+
+/*واجهة التواصل */
+
+
+
+
+
+section h3{
+
+color: #0d47a1;
+  font-size: 36px;
+}
+
+
+
+/*" قسم معلومات التواصل  "صندوق*/
+section.contact-info {
+  background: #fff; 
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1500px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: right; /* لأن النص عربي */
+}
+
+section.contact-info h3 {
+  color: #0d47a1;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 28px;
+}
+
+section.contact-info p {
+  font-size: 16px;
+  margin: 8px 0;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+
+
+
+
+
+
+/*واجهة الملف الشخصي */
+
+/* ====== بيانات المستخدم ====== */
+.user-info {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 460%;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.user-info h2 {
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+.user-info img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;       /* يخليها دائرية */
+  border: 3px solid #1976d2;
+  margin-bottom: 15px;
+}
+
+.user-info p {
+  font-size: 16px;
+  color: #444;
+  margin: 10px 0;
+  padding: 10px 12px;
+  background: #f9f9f9;        /* خلفية فاتحة */
+  border: 1px solid #eee;     /* إطار خفيف */
+  border-radius: 6px;         /* حواف ناعمة */
+  text-align: right;          /* عشان النص عربي */
+  transition: 0.3s;
+}
+
+
+.user-info p:hover {
+  background: #e3f2fd;        /* يتغير اللون عند المرور */
+  border-color: #bbdefb;
 }
