@@ -1,0 +1,175 @@
+body {
+  font-family: Arial, sans-serif;/*نوع الخط */
+  margin: 0;/*المسافة الخارجية للعناصر*/ 
+  padding: 0;/*المسافة الداخلية للعناصر */
+  direction: rtl;
+  background: #82c7fb;
+  color: #333;/* لون الخط */ 
+  line-height: 1.8; /* المسافة بين النصوص */ 
+  font-size: 20px;/* حجم الخط */ 
+}
+
+main {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 15px;
+
+}
+
+/* الهيدر */
+header {
+  background: linear-gradient(darkblue, blue); /* تدرج بلون الهيدر*/ 
+  color: #fff;
+  padding: 60px 16px;  
+  text-align: center; 
+}
+ 
+
+/*التحكم بالخط يالي بالهيدر */ 
+header h1 {
+  margin: 0 0 10px;
+  font-size: 50px;
+  
+}
+
+/*  القائمة  */
+nav ul {
+  list-style: none; /*يشيل النقاط و الترقيم */ 
+  margin: 30px 0 0;     
+  display: flex;
+  gap: 24px;
+  justify-content: center; 
+}
+
+nav a {
+  display: inline-block; 
+  color: #fcfcf8;
+  background: #1976d2;
+  padding: 12px 20px;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-size: 18px;
+  min-width: 170px;
+  text-align: center;
+}
+
+nav a:hover {
+   background: #0d47a1;
+    transform: translateY(-3px);  
+}
+
+/* الأقسام */
+section {
+  background: #fff; 
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px; /* تدوير الزوايا */ 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+}
+
+
+p{
+  margin: 0 0 12px;
+  text-align: center; /* يخلي النص بالنص */ 
+}
+
+
+
+/* العناوين الكبيرة يالي بالاقسام */ 
+section h2 {
+  color: #0d47a1;
+  margin-bottom: 10px;
+  font-size: 300%;
+  text-align: center;
+
+}
+
+/* المقالات */
+article {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 4px solid #8fa4ba;
+  background: #f9f9f9;
+  border-radius: 4px;
+  text-align: center  ;
+
+    color: #0d47a1;       
+}
+
+
+
+
+
+
+/* النموذج */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /*التباعد*/ 
+}
+
+
+
+
+input, textarea {
+  width: 100%;                
+
+  padding: 12px 15px;      
+  border: 1px solid #ccc;     
+  border-radius: 8px;       
+  font-size: 16px;          
+  background: #f9f9f9;       
+  transition: all 0.3s ease;  
+  box-sizing: border-box;     
+}
+
+
+/* تغييرات label*/
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 25px;
+  font-weight: bold;
+  color:#0d47a1;
+  text-align: right;
+}
+
+
+
+
+
+/*  الأزرار  */
+button {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;  /* عند المرور بالماوس يتحول المؤشر ليد */
+  transition: 0.2s;
+  display: inline-block; /* يخلي الزر مثل بلوك صغير يقبل width/height */ 
+  margin: 10px auto;
+  width:60%;
+  height: 80%;
+  font-size: 150%;
+
+}
+
+
+button:hover {
+  background: #0d47a1;
+}
+
+
+
+
+
+/* الفوتر */
+footer {
+  text-align: center;
+  padding: 16px;
+  background: linear-gradient(darkblue, blue);
+  color: white;
+  margin-top: 10px;
+  
+}
